@@ -8,13 +8,41 @@
     "serve": "webpack-dev-server --mode development",
     "build": "webpack --mode production"
   },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "/src/.*\\.*test.(ts|tsx)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/tests/fileMock.js",
+      "\\.css$": "identity-obj-proxy"
+    },
+    "setupFiles": [
+      "<rootDir>/config/tests/init.js"
+    ]
+  },
   "dependencies": {
+    "@types/enzyme": "^3.1.14",
+    "@types/jest": "^23.3.2",
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
     "css-loader": "^1.0.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "style-loader": "^0.23.0",
+    "ts-jest": "^23.1.4",
     "ts-loader": "^5.1.1",
     "typescript": "^3.0.3",
     "typings-for-css-modules-loader": "^1.7.0",
