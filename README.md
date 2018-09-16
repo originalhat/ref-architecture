@@ -1,4 +1,4 @@
-# typescript-ref-arch
+# typescript reference architecture
 
-provide a reference implementation for: typescript, react, redux, redux-saga, css-modules, and jest
+key tools: typescript, react, redux, redux-saga, css-modules, jest
 

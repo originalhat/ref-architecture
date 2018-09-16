@@ -1,5 +1,3 @@
-var path = require('path');
-
 module.exports = {
   devtool: 'inline-source-map',
 
@@ -21,13 +19,30 @@ module.exports = {
         test: /\.tsx?$/,
         loader: "ts-loader",
         exclude: /node_modules/
+      },
+
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "typings-for-css-modules-loader",
+            options: {
+              modules: true,
+              namedExport: true,
+              localIdentName: "[local]___[hash:base64:8]"
+            }
+          }
+        ]
       }
     ]
   },
 
   optimization: {
     splitChunks: {
-      chunks: 'all'
+      chunks: "all"
     }
   }
 };
