@@ -2,7 +2,9 @@
 
 set -efux
 
-# TODO: build in docker via container builder pattern
+# TODO:
+#   use builder container
+#   copy and build in server container
 
 node_modules/.bin/webpack --mode=production --output-path=public
 
