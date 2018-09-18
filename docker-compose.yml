@@ -1,6 +1,11 @@
 version: '3'
 services:
+  api-ktor:
+    build: applications/api-ktor/
+    # TBD
+  api-rust:
+    build: applications/api-rust/
+    # TBD
   web:
     build: applications/web/
-    ports:
-    - "8080:8080"
+    # TBD
