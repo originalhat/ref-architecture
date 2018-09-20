@@ -1,11 +1,24 @@
 version: '3'
 services:
-  api-ktor:
-    build: applications/api-ktor/
-    # TBD
-  api-rust:
-    build: applications/api-rust/
-    # TBD
-  web:
-    build: applications/web/
-    # TBD
+  #  api-ktor:
+  #    build: applications/api-ktor/
+
+  #  api-rust:
+  #    build: applications/api-rust/
+
+  web-server:
+    build: applications/web-server/
+    volumes:
+      - "web-volume:/usr/share/nginx/html"
+    ports:
+      - "8080:80"
+
+  web-app:
+    build: applications/web-app/
+    volumes:
+      - ./applications/web-app:/app
+      - web-volume:/tmp/public
+
+
+volumes:
+  web-volume:
