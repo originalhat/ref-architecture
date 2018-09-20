@@ -4,5 +4,5 @@ WORKDIR /app
 RUN yarn install
 CMD yarn webpack --mode=production
 
-FROM nginx:1.15.3
+FROM nginx:latest
 COPY --from=0 /app/public /usr/share/nginx/html
