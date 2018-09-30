@@ -1,4 +1,4 @@
-# api-ktor
+# ktor
 
 kotlin/ktor based API
 

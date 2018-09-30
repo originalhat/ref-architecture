@@ -1,7 +1,7 @@
 version: '3'
 services:
-  #  api-ktor:
-  #    build: applications/api-ktor/
+  #  ktor:
+  #    build: applications/ktor/
 
   #  api-rust:
   #    build: applications/api-rust/

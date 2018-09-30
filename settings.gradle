@@ -1,2 +1,1 @@
-include "applications:api-ktor"
-
+include "applications:ktor"
